@@ -5,7 +5,7 @@ import ChessRank from './ChessRank.vue';
 
 <template>
     <div class="board">
-        <ChessRank v-for="rank in 8" :key="rank" :rank="9-rank"/>
+        <ChessRank v-for="row in 8" :key="row" :rank="9-row"/>
     </div>
 </template>
 
