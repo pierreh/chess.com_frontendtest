@@ -7,7 +7,7 @@ import State from './State';
     <h1>Chess.com Frontend Challenge</h1>
     <div v-show="State.clickedSquares.length > 0">Squares clicked:</div>
     <div class="container">
-        <span v-for="(square, idx) in State.clickedSquares" :key="idx">{{ idx }}: {{ square }}</span>
+        <span v-for="(square, idx) in State.clickedSquares" :key="idx">{{ idx+1 }}: {{ square }}</span>
     </div>
 </template>
 
@@ -16,6 +16,15 @@ import State from './State';
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    height: 30vw;
+}
+@media (min-width: 1024px) {
+    .container {
+        height: 30vw;
+    }
+}
+@media (max-width: 1024px) {
+    .container {
+        height: 100vw;
+    }
 }
 </style>
